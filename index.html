@@ -10,7 +10,7 @@
 </head>
 <body>
   <header class="topnav">
-    <img src="Logo.png" alt="logo" class="logo">
+    <img src="img/Logo.png" alt="logo" class="logo">
     <label class="tagline">"  Sky Scan " </label>
     <nav class="nav-links">
         <a class="active" id="home" href="index.html">Home</a>
@@ -19,23 +19,22 @@
         <a href="reports.html">Map</a>
         <div  class="searchBar">
           <input type="text" placeholder="Enter Your Location" id="searchBar">
-          <button type="submit" id="searchBtn" onclick="alert('Invalid Customer NIC')">Search</button>
+          <button type="submit" id="searchBtn" onclick="searching()">Search</button>
       </div>
     </nav>
 </header>
 
-
+<!-- Current Weather -->
 <div class="banner">
-  <img src="_743b166e-4654-4dcf-b850-588712a62e58.jfif" alt="banner" class="banner-img" id="bnrimg">
+  <img src="img/_743b166e-4654-4dcf-b850-588712a62e58.jfif" alt="banner" class="banner-img" id="currenttIcon">
   <div class="bannertext">
-      <h3 class="bannertitle">Sri Lanka</h3>
-      <h4 class="bannersub">Colombo</h4>
+      <h3 class="bannertitle" id="locationName">Colombo</h3>
+      <h4 class="bannersub" id="countryName">Sri lanka</h4>
       <div class="weather-info">
-        <p id="current1"><span class="icon">&#9728;</span> Partly Sunny</p>
-        <p id="Time"><span class="icon">&#128339;</span> 17:55</p>
-        <p id="Date1"><span class="icon">&#128197;</span> Friday 12th June</p>
-        <p id="Temp"><span class="icon">&#x1F321;</span> 32 c</p>
-        <p id="humidity"><span class="icon">&#128167;</span> 92%</p>
+        <p id="currentWeather"><span class="icon">&#9728;</span> Partly Sunny</p>
+        <p id="currentTime"><span class="icon">&#128339;</span> 17:55</p>
+        <p id="currentTemp"><span class="icon">&#x1F321;</span> 32 c</p>
+        <p id="curentHumidity"><span class="icon">&#128167;</span> 92%</p>
     </div>
   </div>
 </div>
@@ -49,7 +48,7 @@
 
 <div class="container">
   <div class="item-card">
-      <img src="cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" id="crntfor1">
+      <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" id="crntfor1">
       <div class="weather-info2">
         <p id="Date2"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
         <p id="current2"><span class="icon">&#9728;</span> Partly Sunny</p>
@@ -59,7 +58,7 @@
 
   </div>
   <div class="item-card">
-      <img src="cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" height="180px" id="crntfor2">
+      <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" height="180px" id="crntfor2">
       <div class="weather-info2">
         <p id="Date3"><span class="icon">&#128197;</span> <b> Saturday 13th June </b></p>
         <p id="current3"><span class="icon">&#9728;</span> Partly Sunny</p>
@@ -68,7 +67,7 @@
     </div>
   </div>
   <div class="item-card">
-      <img src="cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" height="180px" id="crntfor3">
+      <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" height="180px" id="crntfor3">
       <div class="weather-info2">
         <p id="Date4"><span class="icon">&#128197;</span> <b> Saturday 13th June </b></p>
         <p id="current4"><span class="icon">&#9728;</span> Partly Sunny</p>
@@ -77,7 +76,7 @@
     </div>
   </div>
   <div class="item-card">
-      <img src="cloud with sun clip art.jfif" alt="weatherclip" style="width:200px;" height="180px" id="crntfor4">
+      <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:200px;" height="180px" id="crntfor4">
       <div class="weather-info2">
         <p id="Date5"><span class="icon">&#128197;</span> <b> Saturday 13th June </b></p>
         <p id="current5"><span class="icon">&#9728;</span> Partly Sunny</p>
@@ -94,7 +93,7 @@
 
 <div class="container">
   <div class="item-card">
-      <img src="cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" id="crntfor6">
+      <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" id="crntfor6">
       <div class="weather-info2">
         <p id="Date6"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
         <p id="current6"><span class="icon">&#9728;</span> Partly Sunny</p>
@@ -104,7 +103,7 @@
 
   </div>
   <div class="item-card">
-      <img src="cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" height="180px" id="crntfor7">
+      <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" height="180px" id="crntfor7">
       <div class="weather-info2">
         <p id="Date7"><span class="icon">&#128197;</span> <b> Saturday 13th June </b></p>
         <p id="current7"><span class="icon">&#9728;</span> Partly Sunny</p>
@@ -113,7 +112,7 @@
     </div>
   </div>
   <div class="item-card">
-      <img src="cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" height="180px" id="crntfor8">
+      <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:100%;" height="180px" id="crntfor8">
       <div class="weather-info2">
         <p id="Date8"><span class="icon">&#128197;</span> <b> Saturday 13th June </b></p>
         <p id="current8"><span class="icon">&#9728;</span> Partly Sunny</p>
@@ -122,7 +121,7 @@
     </div>
   </div>
   <div class="item-card">
-      <img src="cloud with sun clip art.jfif" alt="weatherclip" style="width:200px;" height="180px" id="crntfor9">
+      <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:200px;" height="180px" id="crntfor9">
       <div class="weather-info2">
         <p id="Date9"><span class="icon">&#128197;</span> <b> Saturday 13th June </b></p>
         <p id="current9"><span class="icon">&#9728;</span> Partly Sunny</p>
