@@ -112,7 +112,7 @@ body, h1, h2, h3, p, img, nav, a {
   padding-bottom: 40px;
   margin-top: 0px;
   margin-bottom: 0px;
-  margin-left: -50px;
+  margin-left: -49px;
 }
 
 /* Banner image */
@@ -234,73 +234,120 @@ body, h1, h2, h3, p, img, nav, a {
 }
 
 /* ----------------------------------------------- Forecast Section ------------------------------------- */
-.forecast{
-  background-color: #c3f2fa;
-  padding-top: 10px;
-  padding-bottom: 0px;
-  display: flex;
-  gap: 15px;
-}
 
 .forecastTitle{
   font-size: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: #085472;
+  background-color: #d1eaea;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  padding-left: 80px;
+  text-align: center;
+  
 }
 
-/* ----------------------------------------------Forecast Cards------------------------------------------ */
-.container {
-  margin-top: 25px;
-  margin-left: 100px;
-  margin-bottom: 55px;
-  display: flex; /* Use flexbox to align items horizontally */
-  gap: 20px; /* Space between item cards */
+.forecastSec{
+  margin-left: 130px;
+  border: 2px solid #b9b9b9; /* A light grey solid border */
+  border-radius: 10px; /* Rounded corners (optional) */
+  padding: 15px; /* Padding to give some space inside the border */
+  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1); /* Adds a subtle shadow for a 3D effect (optional) */
+  background-color: #f9f9f9; /* Light background color */
+  margin-right: 745px;
 }
 
-.item-card {
-  border: 3px solid #3c6b7e; /* Border color to match your example */
-  border-radius: 8px; /* Optional: adding rounded corners */
-  padding: 15px; /* Optional: adding padding inside the border */
-  display: flex; /* Flex display to handle content within */
-  flex-direction: column; /* Ensure vertical stacking of content within card */
-  align-items: center; /* Center align items horizontally */
-  width: 300px; /* Adjust the width as needed */
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
-  margin-right: 10px;
-}
-.weather-map-section {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 800px;
+.daytag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Adjusts spacing between items */
+  gap: 10px; /* Adds some space between the elements */
 }
 
-.section-title {
-  font-size: 18px;
-  color: #0066cc;
-  margin-bottom: 10px;
+.daytag p, 
+.daytag img {
+  margin: 0;
 }
 
-#Date{
-  font-size: 19px;
-  font-family: sans-serif;
-}
-#current{
-  font-size: 17px;
+/* History Section----------------------------------------------------------------------------------------- */
+.historyTitle{
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #085472;
+  background-color: #d1eaea;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  
 }
 
-.map-container {
-  width: 100%;
-  height: 400px;
-  border-radius: 10px;
+.historySec{
+  margin-left: 54%;
+  border: 2px solid #b9b9b9; /* A light grey solid border */
+  border-radius: 10px; /* Rounded corners (optional) */
+  padding: 15px; /* Padding to give some space inside the border */
+  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1); /* Adds a subtle shadow for a 3D effect (optional) */
+  background-color: #f9f9f9; /* Light background color */
+  margin-right: 95px;
+  margin-top: 30px;
 }
+
+
+
+/* //Alert Section-------------------------------------------------------------------------------------- */
+.AlertSec{
+  margin-left: 820px;
+  border: 2px solid #b9b9b9; /* A light grey solid border */
+  border-radius: 10px; /* Rounded corners (optional) */
+  padding: 15px; /* Padding to give some space inside the border */
+  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1); /* Adds a subtle shadow for a 3D effect (optional) */
+  background-color: #f9f9f9; /* Light background color */
+  margin-right: 95px;
+  margin-top: -850px;
+}
+.alertTitle{
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #085472;
+  background-color: #efc3bf;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+#alertTitle2{
+  font-size: 30px;
+  color: rgb(163, 81, 81);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#alertDesc{
+  font-size: 20px;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+#areas{
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+#desc{
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.alertBody{
+  border: 2px solid #b9b9b9; /* A light grey solid border */
+  border-radius: 10px; /* Rounded corners (optional) */
+  padding: 15px; /* Padding to give some space inside the border */
+  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1); /* Adds a subtle shadow for a 3D effect (optional) */
+  background-color: #f9f9f9; /* Light background color */
+}
+
 
 /* ---------------------------  Footer ---------------------------------------- */
 

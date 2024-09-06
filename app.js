@@ -61,31 +61,31 @@ function setCurrent(searchlocation) {
 
 // Function to fetch and display 4-day weather forecast for a given location
 function setForecast(searchlocation) {
-  fetch('https://api.weatherapi.com/v1/forecast.json?key=af7def029d84448e957173059243108&q=' + searchlocation + '&days=5')
+  fetch('https://api.weatherapi.com/v1/forecast.json?key=af7def029d84448e957173059243108&q=' + searchlocation + '&days=8')
     .then(response => response.json())
     .then(data => {
       const forecastDays = data.forecast.forecastday;
       document.getElementById("invalidMsg").innerHTML = "";
       
       // Loop through available forecast days (limit to 3 to avoid index error)
-      for (let i = 1; i < Math.min(forecastDays.length, 5); i++) {
-        document.getElementById(`Date${i+1}`).innerHTML = `<span class="icon">&#128197;</span> <b>${forecastDays[i].date}</b>`;
+      for (let i = 0; i < 7; i++) {
+        document.getElementById(`Date${i+1}`).innerHTML = `<span class="icon">&#128197;</span> <b>${forecastDays[i+1].date}</b>`;
         document.getElementById(`current${i+1}`).innerHTML = `<span class="icon">&#9728;</span> ${forecastDays[i].day.condition.text}`;
         document.getElementById(`Temp${i+1}`).innerHTML = `<span class="icon">&#x1F321;</span> ${forecastDays[i].day.avgtemp_c}°C`;
         document.getElementById(`hummidity${i+1}`).innerHTML = `<span class="icon">&#128167;</span> ${forecastDays[i].day.avghumidity}%`;
-        document.getElementById(`crntfor${i}`).src = `${forecastDays[i].day.condition.icon}`;
+        document.getElementById(`crntfor${i+1}`).src = `${forecastDays[i+1].day.condition.icon}`;
       }
     })
     .catch(error => {
       console.error(error);
-      document.getElementById("invalidMsg").innerHTML = "City not found";
+      document.getElementById("invalidMsg").innerHTML = "";
       
     });
 }
 
 
 
-//History --------------------------------------------------------------------------------------------
+// History --------------------------------------------------------------------------------------------
 // Function to fetch and display weather history for the past 4 days
 function setHistory(searchlocation) {
 
@@ -94,7 +94,7 @@ function setHistory(searchlocation) {
   const pastDates = [];
 
   // Loop to get dates for the past 4 days
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 0; i <= 2; i++) {
     const pastDate = new Date(currentDate);
     pastDate.setDate(currentDate.getDate() - i);
     pastDates.push(pastDate.toISOString().split('T')[0]); // Format the date to YYYY-MM-DD
@@ -113,16 +113,16 @@ function setHistory(searchlocation) {
         console.log(index);
         
         // Dynamically update the history data in your UI for each day
-        document.getElementById('Date' + (6 + index)).innerHTML = `<span class="icon">&#128197;</span> <b>${data.forecast.forecastday[0].date}</b>`;
+        document.getElementById('Date' + (20 + index)).innerHTML = `<span class="icon">&#128197;</span> <b>${data.forecast.forecastday[0].date}</b>`;
        
         //-------------------------------------------
         
         //===========================================
        
-        document.getElementById('current' + (6 + index)).innerHTML = `<span class="icon">&#9728;</span> ${data.forecast.forecastday[0].day.condition.text}`;
-        document.getElementById('Temp' + (6 + index)).innerHTML = `<span class="icon">&#x1F321;</span> ${data.forecast.forecastday[0].day.avgtemp_c}°C`;
-        document.getElementById('hummidity' + (6 + index)).innerHTML = `<span class="icon">&#128167;</span> ${data.forecast.forecastday[0].day.avghumidity}%`;
-        document.getElementById('crntfor' + (6 + index)).src = `${data.forecast.forecastday[0].day.condition.icon}`;
+        document.getElementById('current' + (20 + index)).innerHTML = `<span class="icon">&#9728;</span> ${data.forecast.forecastday[0].day.condition.text}`;
+        document.getElementById('Temp' + (20 + index)).innerHTML = `<span class="icon">&#x1F321;</span> ${data.forecast.forecastday[0].day.avgtemp_c}°C`;
+        document.getElementById('hummidity' + (20 + index)).innerHTML = `<span class="icon">&#128167;</span> ${data.forecast.forecastday[0].day.avghumidity}%`;
+        document.getElementById('crntfor' + (19 + index)).src = `${data.forecast.forecastday[0].day.condition.icon}`;
       })
       .catch(error => console.error('SetCurrent Error:', error));
   });
@@ -168,4 +168,38 @@ function formatTime(dateTimeString) {
   
   return `${hours}.${minutes < 10 ? '0' + minutes : minutes}`;
 }
+
+//Alert Function-------------------------------------------
+function setAlert(searchlocation) {
+  fetch(`https://api.weatherapi.com/v1/forecast.json?key=af7def029d84448e957173059243108&q=${searchlocation}&days=1&alerts=yes`)
+    .then(response => response.json())
+    .then(data => {
+      // Check if there are any alerts
+      if (data.alerts && data.alerts.alert && data.alerts.alert.length > 0) {
+        const alert = data.alerts.alert[0]; // Get the first alert
+
+        // Update the HTML elements with alert details
+        document.getElementById('alertTitle2').innerHTML = alert.event || 'No event information';
+        document.getElementById('alertDesc').innerHTML = alert.desc || 'No description available';
+        document.getElementById('areas').innerHTML = alert.areas || 'No affected areas';
+        document.getElementById('note').innerHTML = alert.note || 'No additional notes';
+      } else {
+        // If no alerts, show a default message
+        document.getElementById('alertTitle2').innerHTML = 'No alerts';
+        document.getElementById('alertDesc').innerHTML = '';
+        document.getElementById('areas').innerHTML = '';
+        document.getElementById('note').innerHTML = '';
+      }
+    })
+    .catch(error => {
+      console.error('SetAlert Error:', error);
+
+      // Handle fetch errors
+      document.getElementById('alertTitle2').innerHTML = 'Error fetching alerts';
+      document.getElementById('alertDesc').innerHTML = '';
+      document.getElementById('areas').innerHTML = '';
+      document.getElementById('note').innerHTML = '';
+    });
+}
+
 
