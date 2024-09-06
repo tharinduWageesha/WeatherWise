@@ -7,26 +7,31 @@ body, h1, h2, h3, p, img, nav, a {
   vertical-align: baseline;
 }
 
+.nav-links a.active {
+  color: rgb(40, 36, 1);
+  font-weight: bold;
+}
 
 .topnav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  padding: 10px 20px;
+  padding: 5px 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 30px;
 }
 
 
 .topnav .logo {
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 140px;
 }
 
 
 .topnav .tagline {
-  font-size: 27px;
+  font-size: 22px;
   color: #047491;
   margin-left: 20px;
   flex-grow: 1;
@@ -53,7 +58,7 @@ body, h1, h2, h3, p, img, nav, a {
   padding: 10px;
   border: 2px solid #04c5c5;
   border-radius: 25px 0 0 25px;
-  width: 300px; /* Adjust the width as needed */
+  width: 300px;
   font-size: 1em;
   outline: none;
   transition: all 0.3s ease;
@@ -75,21 +80,39 @@ body, h1, h2, h3, p, img, nav, a {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-#searchBtn:hover {
-  background-color: #04c5c5;
-  border-color: #04c5c5;
-  color: #006b8b;
+#searchBtn:focus {
+  outline: none;
 }
 
-/* ------------------------------------  Current Sri lanka --------------------------------------- */
+#searchBtn:hover {
+  background-color: #34a4d1;
+  border-color: #04c5c5;
+  color: #000000;
+}
+
+#invalidMsg {
+  color: red;
+  font-size: 15px;
+  margin-top: 5px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+#forcastBtn:hover{
+  color: #000000;
+}
+
+
+/* ------------------------------------  Current Weather --------------------------------------- */
 .banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;  
   padding-bottom: 40px;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -50px;
 }
 
 /* Banner image */
@@ -102,27 +125,79 @@ body, h1, h2, h3, p, img, nav, a {
   
 }
 
-/* Banner text container */
+
 .bannertext {
   color: #1282b6;
   text-align: left;
-  padding-left: 140px;
   flex: 1;
+  margin-top: -20px; /* Move the text up by adjusting the margin */
+  border: 2px solid #ccc; /* A light grey solid border */
+  border-radius: 10px; /* Rounded corners (optional) */
+  padding: 15px; /* Padding to give some space inside the border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect (optional) */
+  background-color: #f9f9f9; /* Light background color */
+  margin-right: 115px;
 }
+
 
 /* Banner title */
 .bannertitle {
-  font-size: 100px;
+  font-size: 60px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   cursor: alias;
+  text-align: center;
+  margin-top: 0px;
   color: hsl(202, 97%, 37%);
+  margin-left: -180px;
+  margin-right: -180px;
 }
-/* Banner subtitle */
-.bannersub {
-  font-size: 30px;
-  margin-bottom: 20px;
-  padding-left: 80px;
-  cursor: alias;
+
+
+#currentTime{
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 32px;
+  margin-left: 30px;
+  color: #0018a0;
+}
+
+#currentDate{
+  font-size: 27px;
+  font-family: initial;
+  margin-top: -63px;
+  margin-left: 250px;
+  color: #0018a0;
+}
+
+#currentWeather{
+  font-size:37px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+  margin-top: -90px;
+  text-align: center;
+  margin-left: -10px;
+  color: #2e6481;
+}
+
+.weather-info1{
+  font-size:30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 50px;
+  margin-left: 90px;
+  color: #000000;
+}
+
+.weather-info2{
+  font-size:30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: -140px;
+  margin-left: 280px;
+  color: #000000;
+}
+
+#conditionIcon{
+  width: 120px;
+  height: 120px;
+  margin-left: 61px;
 }
 
 .weather-widget {
