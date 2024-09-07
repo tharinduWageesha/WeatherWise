@@ -261,6 +261,8 @@ body, h1, h2, h3, p, img, nav, a {
   align-items: center;
   justify-content: space-between; /* Adjusts spacing between items */
   gap: 10px; /* Adds some space between the elements */
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .daytag p, 
@@ -441,4 +443,36 @@ body, h1, h2, h3, p, img, nav, a {
   margin-right: 0;
   border-radius: 100%;
   background-color: #ffffff;
+}
+
+
+
+
+
+
+.searchBar {
+  position: relative; /* This makes the suggestions list appear below the input */
+}
+
+.suggestions-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -10px;
+  position: absolute;
+  background-color: rgb(214, 235, 238);
+  width: 80%;
+  border: 0px solid #939393;
+  border-radius: 17px;
+  max-height: 200px; /* Limiting the height */
+  overflow-y: auto;  /* Enable scrolling if suggestions overflow */
+}
+
+.suggestions-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions-list li:hover {
+  background-color: #dcdbdb;
 }

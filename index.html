@@ -20,9 +20,10 @@
         <a href="#forecastTitle" id="forcastBtn">Forecast</a>
         <a href="https://weather.com/weather/radar/interactive/l/5c06cedb90f1e2fd16aabd3c888073f7982faf6e86276f8d9f077ad7a94918bc" id="forcastBtn" target="_blank">Map</a>
         <div class="searchBar">
-            <input type="text" placeholder="Search City or Zip Code" id="searchBar">
+            <input type="text" placeholder="Search City or Zip Code" id="searchBar" onkeyup="getSuggestions()">
             <button type="submit" id="searchBtn" onclick="searching()">Search</button>
             <p id="invalidMsg"></p>
+            <ul id="suggestions" class="suggestions-list"></ul>
         </div>
     </nav>
 </header>
@@ -69,56 +70,56 @@
   <div class="daytag">
     <p id="Date2"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current2"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor1">
-    <p id="Temp2"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp2"><span class="icon"><i class="fas fa-thermometer-half"></i></span>32 c</p>
+    <p id="humi2"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
   <div class="daytag">
     <p id="Date3"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current3"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor2">
-    <p id="Temp3"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp3"><span class="icon"><i class="fas fa-thermometer-half"></i></span> 32 c</p>
+    <p id="humi3"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
   <div class="daytag">
     <p id="Date4"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current4"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor3">
-    <p id="Temp4"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp4"><span class="icon"><i class="fas fa-thermometer-half"></i></span> 32 c</p>
+    <p id="humi4"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
   <div class="daytag">
     <p id="Date5"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current5"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor4">
-    <p id="Temp5"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp5"><span class="icon"><i class="fas fa-thermometer-half"></i></span> 32 c</p>
+    <p id="humi5"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
   <div class="daytag">
     <p id="Date6"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current6"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor5">
-    <p id="Temp6"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp6"><span class="icon"><i class="fas fa-thermometer-half"></i></span> 32 c</p>
+    <p id="humi6"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
   <div class="daytag">
     <p id="Date7"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current7"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor6">
-    <p id="Temp7"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp7"><span class="icon"><i class="fas fa-thermometer-half"></i></span> 32 c</p>
+    <p id="humi7"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
   <div class="daytag">
     <p id="Date8"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current8"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor7">
-    <p id="Temp8"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp8"><span class="icon"><i class="fas fa-thermometer-half"></i></span> 32 c</p>
+    <p id="humi8"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
   <div class="daytag">
     <p id="Date9"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current9"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor8">
-    <p id="Temp9"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp9"><span class="icon"><i class="fas fa-thermometer-half"></i></span> 32 c</p>
+    <p id="humi9"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
   <div class="daytag">
     <p id="Date10"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current10"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor9">
-    <p id="Temp10"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp10"><span class="icon"><i class="fas fa-thermometer-half"></i></span> 32 c</p>
+    <p id="humi10"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
 </div>
 
@@ -128,7 +129,7 @@
   <div class="alertBody">
     <h4 id="alertTitle2">No Alerts</h4>
     <p id="alertDesc">
-      Currently, there are no alerts available or received for this location in this time. If any weather alerts or important notifications are issued, they will be displayed here immediately to keep you informed. Our system is constantly monitoring for updates, and we will ensure that any alerts are shown promptly when they become available. Please check back regularly for updates, as we aim to provide you with the latest information as soon as it arrives.</p>
+      Currently, there are no alerts available or received for this location at this time. If any weather alerts or important notifications are issued, they will be displayed here immediately to keep you informed. Our system is constantly monitoring for updates, and we will ensure that any alerts are shown promptly when they become available. Please check back regularly for updates, as we aim to provide you with the latest information as soon as it arrives.</p>
     <p id="areas"> </p>
     <p id="note"></p>
   </div>
@@ -140,20 +141,20 @@
   <div class="daytag">
     <p id="Date20"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current20"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor20">
-    <p id="Temp20"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp20"><span class="icon"><i class="fas fa-thermometer-half"></i></span>32 c</p>
+    <p id="humi2"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
   <div class="daytag">
     <p id="Date21"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current21"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor21">
-    <p id="Temp21"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp21"><span class="icon"><i class="fas fa-thermometer-half"></i></span> 32 c</p>
+    <p id="humi21"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
   <div class="daytag">
     <p id="Date22"><span class="icon">&#128197;</span><b> Saturday 13th June </b></p>
     <p id="current22"><span class="icon">&#9728;</span> Partly Sunny</p>
-    <img src="img/cloud with sun clip art.jfif" alt="weatherclip" style="width:110px;" id="crntfor22">
-    <p id="Temp22"><span class="icon">&#x1F321;</span> 32 c</p>
+    <p id="Temp22"><span class="icon"><i class="fas fa-thermometer-half"></i></span> 32 c</p>
+    <p id="humi22"><span class="icon"><i class="fas fa-tint"></i></span>81%</p>
   </div>
 </div>
 
