@@ -38,7 +38,7 @@ function setCurrent(searchlocation) {
   fetch('https://api.weatherapi.com/v1/current.json?key=af7def029d84448e957173059243108&q=' + searchlocation)
     .then(response => response.json())
     .then(data => {
-    if(data.location.country.length > 15 || data.location.name.length > 15){
+    if(data.location.country.length > 20 || data.location.name.length > 15){
       document.getElementById('locationName').style.fontSize = '39px';
       }
       document.getElementById('locationName').innerHTML = `${data.location.name}` + " , " + `${data.location.country}`;
