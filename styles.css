@@ -476,3 +476,79 @@ body, h1, h2, h3, p, img, nav, a {
 .suggestions-list li:hover {
   background-color: #dcdbdb;
 }
+
+
+/*--------------------------------------------- Responsive Design for Mobile Screens ---------------------------*/
+
+@media only screen and (max-width: 768px) {
+  
+  .topnav {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .topnav .logo {
+    height: 80px;
+    width: 120px;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .banner-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .bannertext {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+
+  }
+
+  .bannertitle {
+    font-size: 36px;
+    margin: 0 0;
+ 
+  }
+
+  #currentTime, #currentDate, #currentWeather,#currentTemp, #currentHumidity, #currentPressure, #currentUV, #currentVisibility, #currentDewpoint, #currentHeatIndex {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 24px;
+  }
+
+  .forecastSec {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .AlertSec {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    margin-top: 100px;
+  }
+
+  .historySec {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+}
