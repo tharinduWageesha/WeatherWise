@@ -13,7 +13,7 @@ window.onload = function() {
     }, function(error) {
       console.error('Error getting location:', error);
       alert('Error getting location: ');
-      // Handle location error, fallback to a default location if needed
+
       const defaultLocation = 'Panadura'; 
       setCurrent(defaultLocation);
       setForecast(defaultLocation);
@@ -23,7 +23,7 @@ window.onload = function() {
   } else {
     console.error('Geolocation is not supported by this browser.');
     alert('Geolocation is not supported by this browser.');
-    // Handle lack of geolocation support, use a default location
+
     const defaultLocation = 'Pandura'; 
     setCurrent(defaultLocation);
     setForecast(defaultLocation);
@@ -74,8 +74,6 @@ function setForecast(searchlocation) {
     for (let i = 1; i < 10; i++) {
         const formattedDate = formatDate(data.forecast.forecastday[i].date);
         document.getElementById(`Date${i+1}`).innerHTML = `<span class="icon">&#128197;</span> <b>${formattedDate}</b>`;
-
-        // document.getElementById(`Date${i+1}`).innerHTML = `<span class="icon">&#128197;</span> <b>${forecastDays[i].date}</b>`;
         document.getElementById(`current${i+1}`).innerHTML = `<span class="icon">&#9728;</span> ${forecastDays[i].day.condition.text}`;
         document.getElementById(`Temp${i+1}`).innerHTML = `<span class="icon">&#x1F321;</span> ${forecastDays[i].day.avgtemp_c}°C`;
         document.getElementById(`humi${i+1}`).innerHTML = `<span class="icon">&#128167;</span> ${forecastDays[i].day.avghumidity}%`;
@@ -147,7 +145,6 @@ function formatDate(dateTimeString) {
   const dateObj = new Date(dateTimeString);
   const day = dateObj.getDate();
 
-  // Suffix for the day (st, nd, rd, th)
   const daySuffix = (day) => {
       if (day > 3 && day < 21) return 'th';
       switch (day % 10) {
@@ -189,7 +186,7 @@ function setAlert(searchlocation) {
         if(alert.desc.length > 800){
           document.getElementById('alertDesc').style.fontSize = '11px';
            }
-        else if(alert.desc.length < 400){
+        else if(alert.desc.length < 200){
           document.getElementById('alertDesc').style.fontSize = '26px';
         }
         

@@ -130,12 +130,12 @@ body, h1, h2, h3, p, img, nav, a {
   color: #1282b6;
   text-align: left;
   flex: 1;
-  margin-top: -20px; /* Move the text up by adjusting the margin */
-  border: 2px solid #ccc; /* A light grey solid border */
-  border-radius: 10px; /* Rounded corners (optional) */
-  padding: 15px; /* Padding to give some space inside the border */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect (optional) */
-  background-color: #f9f9f9; /* Light background color */
+  margin-top: -20px; 
+  border: 2px solid #ccc; 
+  border-radius: 10px;
+  padding: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: #f9f9f9;
   margin-right: 115px;
 }
 
@@ -248,19 +248,19 @@ body, h1, h2, h3, p, img, nav, a {
 
 .forecastSec{
   margin-left: 130px;
-  border: 2px solid #b9b9b9; /* A light grey solid border */
-  border-radius: 10px; /* Rounded corners (optional) */
-  padding: 15px; /* Padding to give some space inside the border */
-  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1); /* Adds a subtle shadow for a 3D effect (optional) */
-  background-color: #f9f9f9; /* Light background color */
+  border: 2px solid #b9b9b9; 
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1);
+  background-color: #f9f9f9;
   margin-right: 745px;
 }
 
 .daytag {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Adjusts spacing between items */
-  gap: 10px; /* Adds some space between the elements */
+  justify-content: space-between;
+  gap: 10px; 
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -284,11 +284,11 @@ body, h1, h2, h3, p, img, nav, a {
 
 .historySec{
   margin-left: 54%;
-  border: 2px solid #b9b9b9; /* A light grey solid border */
-  border-radius: 10px; /* Rounded corners (optional) */
-  padding: 15px; /* Padding to give some space inside the border */
-  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1); /* Adds a subtle shadow for a 3D effect (optional) */
-  background-color: #f9f9f9; /* Light background color */
+  border: 2px solid #b9b9b9; 
+  border-radius: 10px;
+  padding: 15px; 
+  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1);
+  background-color: #f9f9f9;
   margin-right: 95px;
   margin-top: 30px;
 }
@@ -298,11 +298,11 @@ body, h1, h2, h3, p, img, nav, a {
 /* //Alert Section-------------------------------------------------------------------------------------- */
 .AlertSec{
   margin-left: 820px;
-  border: 2px solid #b9b9b9; /* A light grey solid border */
-  border-radius: 10px; /* Rounded corners (optional) */
-  padding: 15px; /* Padding to give some space inside the border */
-  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1); /* Adds a subtle shadow for a 3D effect (optional) */
-  background-color: #f9f9f9; /* Light background color */
+  border: 2px solid #b9b9b9; 
+  border-radius: 10px; 
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1); 
+  background-color: #f9f9f9;
   margin-right: 95px;
   margin-top: -850px;
 }
@@ -343,11 +343,11 @@ body, h1, h2, h3, p, img, nav, a {
   text-align: center;
 }
 .alertBody{
-  border: 2px solid #b9b9b9; /* A light grey solid border */
-  border-radius: 10px; /* Rounded corners (optional) */
-  padding: 15px; /* Padding to give some space inside the border */
-  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1); /* Adds a subtle shadow for a 3D effect (optional) */
-  background-color: #f9f9f9; /* Light background color */
+  border: 2px solid #b9b9b9; 
+  border-radius: 10px;
+  padding: 15px; 
+  box-shadow: 0 4px 8px rgba(73, 73, 73, 0.1);
+  background-color: #f9f9f9; 
 }
 
 
@@ -360,7 +360,7 @@ body, h1, h2, h3, p, img, nav, a {
   font-size: 15px;
   line-height: 25px;
   color: #000000;
-  margin-top: 130px; /* Ensures footer is pushed to the bottom */
+  margin-top: 130px;
 }
 
 .site-footerReports {
@@ -369,7 +369,7 @@ body, h1, h2, h3, p, img, nav, a {
   font-size: 15px;
   line-height: 25px;
   color: #000000;
-  margin-top: 210px; /* Ensures footer is pushed to the bottom */
+  margin-top: 210px; 
 }
 
 .site-footerlast {
@@ -378,7 +378,7 @@ body, h1, h2, h3, p, img, nav, a {
   font-size: 15px;
   line-height: 25px;
   color: #000000;
-  margin-top: 20px; /* Ensures footer is pushed to the bottom */
+  margin-top: 20px; 
 }
 
 .site-footer hr {
@@ -451,7 +451,7 @@ body, h1, h2, h3, p, img, nav, a {
 
 
 .searchBar {
-  position: relative; /* This makes the suggestions list appear below the input */
+  position: relative; 
 }
 
 .suggestions-list {
@@ -464,8 +464,8 @@ body, h1, h2, h3, p, img, nav, a {
   width: 80%;
   border: 0px solid #939393;
   border-radius: 17px;
-  max-height: 200px; /* Limiting the height */
-  overflow-y: auto;  /* Enable scrolling if suggestions overflow */
+  max-height: 200px; 
+  overflow-y: auto;  
 }
 
 .suggestions-list li {
